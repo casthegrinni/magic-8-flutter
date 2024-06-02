@@ -12,13 +12,29 @@ class BallPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue,
       appBar: AppBar(
-        backgroundColor: Colors.blue.shade700,
+        backgroundColor: Colors.blue.shade800,
         title: Text(
           'Ask Me Anything',
           style: TextStyle(color: Colors.white),
         ),
       ),
+      body: Ball(),
     );
+  }
+}
+
+class Ball extends StatefulWidget {
+  const Ball({super.key});
+
+  @override
+  State<Ball> createState() => _BallState();
+}
+
+class _BallState extends State<Ball> {
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset('images/ball1.png');
   }
 }
